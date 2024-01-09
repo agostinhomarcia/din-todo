@@ -47,7 +47,7 @@ const App: React.FC<AppProps> = () => {
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
-          paddingHorizontal: 20, // Adicionado para espaçamento horizontal
+          paddingHorizontal: 20,
         }}
         keyboardShouldPersistTaps="handled"
       >

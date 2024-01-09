@@ -48,6 +48,7 @@ const TaskInput: React.FC<TaskInputProps> = ({ addTask }) => {
         onBackdropPress={toggleModal}
         onBackButtonPress={toggleModal}
         backdropOpacity={0.5}
+        style={{ justifyContent: "flex-end", margin: 0 }}
       >
         <View style={styles.modalContent}>
           <Image

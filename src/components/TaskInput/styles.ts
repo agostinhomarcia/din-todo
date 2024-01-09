@@ -4,7 +4,6 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   writeTaskWrapper: {
-    position: "absolute",
     bottom: 10,
     width: "100%",
     flexDirection: "row",
@@ -26,9 +25,12 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "flex-end",
   },
-  addText: {},
+  addText: {
+    color: "#fff",
+  },
   arrowImage: {
-    marginLeft: 10,
+    marginLeft: 12,
+
     color: "#fff",
   },
   modalContent: {
