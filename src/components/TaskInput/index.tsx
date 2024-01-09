@@ -1,14 +1,16 @@
+// TaskInput.tsx
+
 import React, { useState } from "react";
 import {
-  KeyboardAvoidingView,
   Text,
   TextInput,
   TouchableOpacity,
   Keyboard,
-  Platform,
   View,
+  Image,
 } from "react-native";
 import { styles } from "./styles";
+import Modal from "react-native-modal";
 
 interface TaskInputProps {
   addTask: (task: string) => void;
@@ -16,32 +18,58 @@ interface TaskInputProps {
 
 const TaskInput: React.FC<TaskInputProps> = ({ addTask }) => {
   const [task, setTask] = useState<string | null>(null);
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const toggleModal = () => {
+    setModalVisible(!isModalVisible);
+  };
 
   const handleAddTask = () => {
     Keyboard.dismiss();
     if (task) {
       addTask(task);
       setTask(null);
+      toggleModal();
     }
   };
 
   return (
-    <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"}
-      style={styles.writeTaskWrapper}
-    >
-      <TextInput
-        style={styles.input}
-        placeholder={"Adicionar uma tarefa"}
-        value={task || ""}
-        onChangeText={(text) => setTask(text)}
-      />
-      <TouchableOpacity onPress={() => handleAddTask()}>
-        <View style={styles.addWrapper}>
-          <Text style={styles.addText}>+</Text>
+    <View style={styles.writeTaskWrapper}>
+      <View>
+        <TouchableOpacity onPress={toggleModal} style={styles.addWrapper}>
+          <View style={styles.buttonContent}>
+            <Text style={styles.addText}>+</Text>
+          </View>
+        </TouchableOpacity>
+      </View>
+
+      <Modal
+        isVisible={isModalVisible}
+        onBackdropPress={toggleModal}
+        onBackButtonPress={toggleModal}
+        backdropOpacity={0.5}
+      >
+        <View style={styles.modalContent}>
+          <Image
+            source={require("../../assets/logo.png")}
+            style={styles.logo}
+          />
+          <Text style={styles.titleModal}>Nova Tarefa</Text>
+          <Text style={styles.paragraph}>Adicione aqui sua nova tarefa</Text>
+          <View style={styles.inputContainer}>
+            <TextInput
+              style={styles.input}
+              placeholder={"Adicionar uma tarefa"}
+              value={task || ""}
+              onChangeText={(text) => setTask(text)}
+            />
+            <TouchableOpacity onPress={handleAddTask}>
+              <Image source={require("../../assets/arrow.png")} />
+            </TouchableOpacity>
+          </View>
         </View>
-      </TouchableOpacity>
-    </KeyboardAvoidingView>
+      </Modal>
+    </View>
   );
 };
 

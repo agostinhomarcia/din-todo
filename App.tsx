@@ -1,3 +1,5 @@
+// App.tsx
+
 import React, { useState } from "react";
 import {
   StyleSheet,
@@ -5,7 +7,7 @@ import {
   View,
   TextInput,
   ScrollView,
-  Platform,
+  Image,
 } from "react-native";
 import TaskList from "./src/components/TaskList";
 import TaskInput from "./src/components/TaskInput";
@@ -22,6 +24,12 @@ const App: React.FC<AppProps> = () => {
     setTaskItems(itemsCopy);
   };
 
+  const deleteTask = (index: number) => {
+    let itemsCopy = [...taskItems];
+    itemsCopy.splice(index, 1);
+    setTaskItems(itemsCopy);
+  };
+
   const filteredTasks = taskItems.filter((item) =>
     item.toLowerCase().includes(searchText.toLowerCase())
   );
@@ -32,9 +40,14 @@ const App: React.FC<AppProps> = () => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.logoContainer}>
+        <Image source={require("./src/assets/logo.png")} style={styles.logo} />
+      </View>
+
       <ScrollView
         contentContainerStyle={{
           flexGrow: 1,
+          paddingHorizontal: 20, // Adicionado para espaçamento horizontal
         }}
         keyboardShouldPersistTaps="handled"
       >
@@ -46,7 +59,11 @@ const App: React.FC<AppProps> = () => {
             onChangeText={(text) => setSearchText(text)}
           />
           <Text style={styles.sectionTitle}>Tarefas do dia</Text>
-          <TaskList tasks={filteredTasks} completeTask={completeTask} />
+          <TaskList
+            tasks={filteredTasks}
+            completeTask={completeTask}
+            deleteTask={deleteTask}
+          />
         </View>
       </ScrollView>
 
@@ -58,16 +75,25 @@ const App: React.FC<AppProps> = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#E8EAED",
+    backgroundColor: "#fff",
+  },
+  logoContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: 60,
+  },
+  logo: {
+    width: 57,
+    height: 54,
   },
   tasksWrapper: {
-    paddingTop: 80,
-    paddingHorizontal: 20,
+    paddingTop: 30,
   },
   sectionTitle: {
     fontSize: 24,
     fontWeight: "bold",
     marginTop: 20,
+    marginBottom: 10,
   },
   searchInput: {
     paddingVertical: 10,
