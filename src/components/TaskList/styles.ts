@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     borderColor: "#ccc",
     borderWidth: 1,
-    padding: 10,
+    padding: 8,
     borderRadius: 8,
     marginBottom: 10,
   },

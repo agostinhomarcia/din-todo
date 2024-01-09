@@ -12,15 +12,20 @@ import {
 import TaskList from "./src/components/TaskList";
 import TaskInput from "./src/components/TaskInput";
 
+interface TaskItem {
+  text: string;
+  completed: boolean;
+}
+
 interface AppProps {}
 
 const App: React.FC<AppProps> = () => {
-  const [taskItems, setTaskItems] = useState<string[]>([]);
+  const [taskItems, setTaskItems] = useState<TaskItem[]>([]);
   const [searchText, setSearchText] = useState<string>("");
 
   const completeTask = (index: number) => {
     let itemsCopy = [...taskItems];
-    itemsCopy.splice(index, 1);
+    itemsCopy[index] = { ...itemsCopy[index], completed: true };
     setTaskItems(itemsCopy);
   };
 
@@ -31,11 +36,11 @@ const App: React.FC<AppProps> = () => {
   };
 
   const filteredTasks = taskItems.filter((item) =>
-    item.toLowerCase().includes(searchText.toLowerCase())
+    item.text.toLowerCase().includes(searchText.toLowerCase())
   );
 
   const addTask = (newTask: string) => {
-    setTaskItems([...taskItems, newTask]);
+    setTaskItems([...taskItems, { text: newTask, completed: false }]);
   };
 
   return (
