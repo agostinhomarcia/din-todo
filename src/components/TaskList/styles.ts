@@ -8,14 +8,25 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 20,
+    borderColor: "#ccc",
+    borderWidth: 1,
+    padding: 10,
+    borderRadius: 8,
+    marginBottom: 10,
+  },
+  checkContainer: {
+    marginRight: 10,
   },
   check: {
-    width: 35,
-    height: 35,
+    width: 30,
+    height: 30,
   },
   trash: {
-    width: 48,
-    height: 48,
+    width: 30,
+    height: 30,
+  },
+  notCheck: {
+    width: 30,
+    height: 30,
   },
 });

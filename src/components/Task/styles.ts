@@ -9,6 +9,16 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginBottom: 20,
   },
+  task: {
+    padding: 10,
+  },
+  completedTask: {
+    textDecorationLine: "line-through",
+    color: "#888",
+  },
 
-  itemText: {},
+  itemText: {
+    fontSize: 16,
+    color: "#000",
+  },
 });

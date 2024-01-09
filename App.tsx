@@ -54,7 +54,7 @@ const App: React.FC<AppProps> = () => {
         <View style={styles.tasksWrapper}>
           <TextInput
             style={styles.searchInput}
-            placeholder={"Buscar tarefa"}
+            placeholder={"🔍 Buscar tarefa"}
             value={searchText}
             onChangeText={(text) => setSearchText(text)}
           />
@@ -96,13 +96,14 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   searchInput: {
-    paddingVertical: 10,
-    paddingHorizontal: 15,
-    backgroundColor: "#FFF",
-    borderRadius: 10,
-    borderColor: "#C0C0C0",
+    backgroundColor: "#fff",
+    width: "97%",
+    borderColor: "#ccc",
     borderWidth: 1,
-    marginBottom: 10,
+    marginTop: 5,
+    borderRadius: 5,
+    padding: 10,
+    paddingRight: 50,
   },
 });
 
