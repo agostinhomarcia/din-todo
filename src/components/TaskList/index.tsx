@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Image, TouchableOpacity } from "react-native";
 import Task from "../Task";
 import { styles } from "./styles";
 
@@ -17,33 +17,31 @@ const TaskList: React.FC<TaskListProps> = ({
   return (
     <View style={styles.items}>
       {tasks.map((item, index) => (
-        <TouchableOpacity
-          key={index}
-          style={styles.taskContainer}
-          onPress={() => completeTask(index)}
-        >
-          <Image
-            source={
-              item.completed
-                ? require("../../assets/check.png")
-                : require("../../assets/not-check.png")
-            }
-            style={styles.check}
-          />
+        <View key={index} style={styles.taskContainer}>
+          <TouchableOpacity onPress={() => completeTask(index)}>
+            <Image
+              source={
+                item.completed
+                  ? require("../../assets/check.png")
+                  : require("../../assets/not-check.png")
+              }
+              style={styles.check}
+            />
+          </TouchableOpacity>
+
           <Task
             text={item.text}
             completed={item.completed}
             onToggle={() => completeTask(index)}
           />
+
           <TouchableOpacity onPress={() => deleteTask(index)}>
-            <Text>
-              <Image
-                source={require("../../assets/trash.png")}
-                style={styles.trash}
-              />
-            </Text>
+            <Image
+              source={require("../../assets/trash.png")}
+              style={styles.trash}
+            />
           </TouchableOpacity>
-        </TouchableOpacity>
+        </View>
       ))}
     </View>
   );

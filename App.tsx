@@ -64,7 +64,7 @@ const App: React.FC<AppProps> = () => {
             />
             <TextInput
               style={styles.searchInput}
-              placeholder={" Buscar tarefa"}
+              placeholder={"Buscar tarefa"}
               value={searchText}
               onChangeText={(text) => setSearchText(text)}
             />
@@ -90,7 +90,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   searchContainer: {
-    position: "relative",
     width: "100%",
   },
   logoContainer: {
@@ -119,14 +118,16 @@ const styles = StyleSheet.create({
     marginTop: 5,
     borderRadius: 5,
     padding: 10,
-    paddingLeft: 30,
+    paddingLeft: 40,
   },
   searchIcon: {
+    marginTop: 18,
+    marginLeft: 10,
+    marginRight: -25,
     position: "absolute",
-    top: 15,
-    left: 10,
-    width: 20,
-    height: 20,
+    zIndex: 1,
+    width: 24,
+    height: 24,
   },
 });
 

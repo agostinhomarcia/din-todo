@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   items: {
-    marginTop: 10,
+    marginTop: 5,
   },
   taskContainer: {
     flexDirection: "row",
@@ -12,21 +12,15 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 8,
     marginBottom: 10,
-  },
-
-  checkContainer: {
-    marginRight: 10,
+    paddingHorizontal: 7,
+    width: 355,
   },
   check: {
-    width: 30,
-    height: 30,
+    width: 24,
+    height: 24,
   },
   trash: {
-    width: 30,
-    height: 30,
-  },
-  notCheck: {
-    width: 30,
-    height: 30,
+    width: 24,
+    height: 24,
   },
 });

@@ -26,14 +26,10 @@ export const styles = StyleSheet.create({
   addText: {
     color: "#fff",
   },
-  arrowImage: {
-    marginLeft: 12,
 
-    color: "#fff",
-  },
   modalContent: {
     backgroundColor: "#FFF",
-    padding: 20,
+    padding: 40,
     borderRadius: 10,
     alignItems: "center",
   },
@@ -52,12 +48,12 @@ export const styles = StyleSheet.create({
   },
   input: {
     paddingVertical: 15,
-    paddingHorizontal: 15,
+    paddingHorizontal: 20,
     backgroundColor: "#FFF",
     borderRadius: 5,
     borderColor: "#C0C0C0",
     borderWidth: 1,
-    width: 300,
+    width: 320,
     marginTop: 19,
     marginRight: 10,
   },
@@ -65,7 +61,11 @@ export const styles = StyleSheet.create({
   inputContainer: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
     marginTop: 10,
+  },
+  arrowImage: {
+    marginRight: 10,
+    marginTop: 14,
+    width: 25,
   },
 });

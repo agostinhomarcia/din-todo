@@ -1,5 +1,3 @@
-// TaskInput.tsx
-
 import React, { useState } from "react";
 import {
   Text,
@@ -65,7 +63,10 @@ const TaskInput: React.FC<TaskInputProps> = ({ addTask }) => {
               onChangeText={(text) => setTask(text)}
             />
             <TouchableOpacity onPress={handleAddTask}>
-              <Image source={require("../../assets/arrow.png")} />
+              <Image
+                source={require("../../assets/arrow.png")}
+                style={styles.arrowImage}
+              />
             </TouchableOpacity>
           </View>
         </View>

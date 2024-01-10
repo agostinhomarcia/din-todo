@@ -41,9 +41,28 @@
 #### 📚Descrição
 
 <p align="left">
-O projeto consiste em uma aplicação React Native para gerenciar uma lista de tarefas. A interface é composta por itens de tarefa exibidos em contêineres, cada um contendo uma imagem indicativa de conclusão, um texto representando a descrição da tarefa e um ícone de lixeira para exclusão. Os elementos são organizados em uma lista vertical, proporcionando uma experiência de usuário intuitiva.
 
-A lista de tarefas permite a interação do usuário por meio de toques nos itens, marcando as tarefas como concluídas, e oferece a funcionalidade de exclusão por meio do ícone de lixeira. A aparência do aplicativo é estilizada com bordas arredondadas, uma borda sutil e espaçamento adequado entre os itens para proporcionar uma apresentação visualmente agradável.
+Projeto "Lista de Tarefas" 📋📱
+
+O projeto "Lista de Tarefas" é uma aplicação mobile desenvolvida em React Native, proporcionando aos usuários uma forma eficiente de gerenciar suas tarefas diárias.
+
+Funcionalidades:
+
+Adicionar Tarefa:
+
+Os usuários podem adicionar facilmente novas tarefas à lista utilizando um campo de entrada de texto intuitivo. 📝✨
+
+Buscar Tarefa:
+
+A aplicação apresenta uma barra de pesquisa que possibilita aos usuários filtrar suas tarefas com base em palavras-chave, facilitando a localização de itens específicos. 🔍🚀
+
+Concluir Tarefa:
+
+Cada tarefa exibida na lista pode ser marcada como concluída com um simples toque, proporcionando uma experiência interativa e satisfatória. ✅👏
+
+Excluir Tarefa:
+
+Os usuários têm a flexibilidade de excluir tarefas indesejadas, removendo-as da lista para manter um ambiente organizado. 🗑️🧹
 
 </p>
 
