@@ -1,7 +1,7 @@
 ### Teste - React Native com Expo (ToDo List)
 
 <p align="center">
-   <img src="https://media.giphy.com/media/dj2FxWPKHef9H7UIIp/giphy.gif" alt="todo" width="280"/>
+   <img src="https://media.giphy.com/media/dj2FxWPKHef9H7UIIp/giphy.gif" alt="todo" width="120"/>
 </p>
 
 <p align="right">
