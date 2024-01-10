@@ -57,18 +57,25 @@ const App: React.FC<AppProps> = () => {
         keyboardShouldPersistTaps="handled"
       >
         <View style={styles.tasksWrapper}>
-          <TextInput
-            style={styles.searchInput}
-            placeholder={"🔍 Buscar tarefa"}
-            value={searchText}
-            onChangeText={(text) => setSearchText(text)}
-          />
-          <Text style={styles.sectionTitle}>Tarefas do dia</Text>
-          <TaskList
-            tasks={filteredTasks}
-            completeTask={completeTask}
-            deleteTask={deleteTask}
-          />
+          <View style={styles.searchContainer}>
+            <Image
+              source={require("./src/assets/lupa.png")}
+              style={styles.searchIcon}
+            />
+            <TextInput
+              style={styles.searchInput}
+              placeholder={" Buscar tarefa"}
+              value={searchText}
+              onChangeText={(text) => setSearchText(text)}
+            />
+
+            <Text style={styles.sectionTitle}>Tarefas do dia</Text>
+            <TaskList
+              tasks={filteredTasks}
+              completeTask={completeTask}
+              deleteTask={deleteTask}
+            />
+          </View>
         </View>
       </ScrollView>
 
@@ -81,6 +88,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+  },
+  searchContainer: {
+    position: "relative",
+    width: "100%",
   },
   logoContainer: {
     alignItems: "center",
@@ -102,13 +113,20 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     backgroundColor: "#fff",
-    width: "97%",
+    width: "100%",
     borderColor: "#ccc",
     borderWidth: 1,
     marginTop: 5,
     borderRadius: 5,
     padding: 10,
-    paddingRight: 50,
+    paddingLeft: 30,
+  },
+  searchIcon: {
+    position: "absolute",
+    top: 15,
+    left: 10,
+    width: 20,
+    height: 20,
   },
 });
 

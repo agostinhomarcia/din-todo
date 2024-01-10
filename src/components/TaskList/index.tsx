@@ -1,5 +1,3 @@
-// TaskList.tsx
-
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import Task from "../Task";
