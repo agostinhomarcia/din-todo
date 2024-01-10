@@ -71,7 +71,7 @@ $ cd din-todo
 # Install dependencies
 $ npm install
 # Run the project
-$  npx expo start
+$ npx expo start
 # The server will initialize in the <exp://192.168.15.5:8081>
 ```
 
