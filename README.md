@@ -1,4 +1,4 @@
-Teste - React Native com Expo (ToDo List)
+### Teste - React Native com Expo (ToDo List)
 
 <p align="center">
    <img src="https://media.giphy.com/media/Cfh2NNotXjFxQpFBIX/giphy.gif" alt="todo" width="280"/>
@@ -34,7 +34,18 @@ Teste - React Native com Expo (ToDo List)
 
 <br>
 
+<hr>
+
 ## :dart: About
+
+#### 📚Descrição
+
+<p align="left">
+O projeto consiste em uma aplicação React Native para gerenciar uma lista de tarefas. A interface é composta por itens de tarefa exibidos em contêineres, cada um contendo uma imagem indicativa de conclusão, um texto representando a descrição da tarefa e um ícone de lixeira para exclusão. Os elementos são organizados em uma lista vertical, proporcionando uma experiência de usuário intuitiva.
+
+A lista de tarefas permite a interação do usuário por meio de toques nos itens, marcando as tarefas como concluídas, e oferece a funcionalidade de exclusão por meio do ícone de lixeira. A aparência do aplicativo é estilizada com bordas arredondadas, uma borda sutil e espaçamento adequado entre os itens para proporcionar uma apresentação visualmente agradável.
+
+</p>
 
 <h4 align="center"> Todo </h4>
 
