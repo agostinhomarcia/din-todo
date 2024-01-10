@@ -47,17 +47,22 @@ A lista de tarefas permite a interação do usuário por meio de toques nos iten
 
 </p>
 
+[Figma do projeto](<https://www.figma.com/file/Sk9LpMq9uTQiUqEaGi16OJ/Clube-todo-(Community)?type=design&node-id=0-1&mode=design&t=gzslxz8n4jIrA5CF-0>)
+
 <h4 align="center"> Todo </h4>
 
 <p align="center">
    <img src="./assets/todo.gif" alt="todo" width="500"/>
 </p>
+<hr>
 
 ## :sparkles: Features
 
 :heavy_check_mark: Feature 1;\
 :heavy_check_mark: Feature 2;\
 :heavy_check_mark: Feature 3;
+
+<hr>
 
 ## :rocket: Technologies
 
@@ -67,6 +72,8 @@ The following tools were used in this project:
 - [TypeScript](https://www.w3schools.com/typescript/)
 - [Expo](https://docs.expo.dev/)
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+<hr>
 
 ## :white_check_mark: Requirements
 
@@ -85,6 +92,8 @@ $ npm install
 $ npx expo start
 # The server will initialize in the <exp://192.168.15.5:8081>
 ```
+
+<hr>
 
 ## :memo: License
 
